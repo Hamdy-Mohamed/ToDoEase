@@ -1,0 +1,30 @@
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+}
+.motion_icons :nth-child(n) {
+  height: 4rem;
+  margin-left: 1rem;
+}
+.motion_icons :nth-child(1) {
+  cursor: pointer;
+}
+.motion_icons :nth-child(2) {
+  cursor: wait;
+}
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icons div :nth-child(n) {
+  height: 1rem;
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+.icons div :nth-child(n):hover {
+  color: #135ed1;
+  cursor: pointer;
+}
