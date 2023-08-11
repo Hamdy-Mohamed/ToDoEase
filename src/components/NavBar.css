@@ -1,0 +1,59 @@
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: 2rem;
+  gap: 2rem;
+  list-style: none;
+}
+ul li {
+  height: 2rem;
+  min-width: 4rem;
+  background: rgb(15, 136, 130);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+ul li:hover {
+  background: rgb(24, 139, 168);
+  cursor: pointer;
+  scale: 1.1;
+}
+ul li :nth-child(n) {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.new {
+  display: none;
+}
+
+.Nav_input {
+  height: 1rem;
+  width: 2rem;
+  position: absolute;
+  left: 0;
+  margin: 2rem;
+  transition: 1s;
+}
+.Nav_input:focus {
+  height: 2rem;
+  width: 20rem;
+}
+
+@media only screen and (max-width: 773px) {
+  .Nav_input {
+    margin-top: 10rem;
+    border: 2px solid rgb(24, 139, 168);
+  }
+  .Nav_input:focus {
+    margin-top: 10rem;
+    height: 3rem;
+    width: 26rem;
+  }
+}

@@ -1,10 +1,10 @@
-.home_src {
+.new_src {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: url(../BG.svg);
+  background: url(../newComponent.svg);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -12,21 +12,14 @@
   outline: none;
   transition: 0.2s;
 }
-input {
-  padding: 1rem;
-  height: 3rem;
-  width: 32rem;
-  border-radius: 10px;
-  margin-bottom: 2rem;
-  background: transparent;
-  border: 1px solid #865dff;
-  color: white;
+.new_input {
+  border: 1px solid #1e97dd;
 }
-input:hover {
-  box-shadow: 1px 1px 12px 5px #865dff, 1px 1px 0px 2px #865dff;
+.new_input:hover {
+  box-shadow: 1px 1px 12px 5px #1e97dd, 1px 1px 0px 2px #865dff;
 }
-.add {
-  background: #865dff;
+.new_add {
+  background: #1e97dd;
   height: 3rem;
   min-width: 20rem;
   border: none;
@@ -35,16 +28,16 @@ input:hover {
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
-.add:hover {
-  box-shadow: 1px 1px 12px 5px #865dff, 1px 1px 0px 2px #865dff;
+.new_add:hover {
+  box-shadow: 1px 1px 12px 5px #1e97dd, 1px 1px 0px 2px #865dff;
   cursor: pointer;
 }
 ::placeholder {
   color: white;
 }
-.delete {
+.new_delete {
   min-height: 3rem;
-  border: 1px solid #865dff;
+  border: 1px solid #1e97dd;
   color: white;
   width: 26rem;
   overflow: hidden;
@@ -55,19 +48,19 @@ input:hover {
   padding: 1rem;
   border-radius: 15px;
 }
-.delete_btn {
+.new_delete_btn {
   height: 2rem;
   width: 6rem;
   /* border: red; */
   border: none;
   background: transparent;
-  border: 1px solid #865dff;
+  border: 1px solid #1e97dd;
   border-radius: 6px;
   color: white;
   font-weight: bold;
   cursor: pointer;
 }
-.alert {
+.new_alert {
   height: 5rem;
   width: 12rem;
   border: 1px solid black;
@@ -78,7 +71,7 @@ input:hover {
   gap: 1rem;
   position: relative;
 }
-.alert::before {
+.new_alert::before {
   content: "To Delete Task";
   display: flex;
   justify-content: center;
@@ -93,10 +86,10 @@ input:hover {
 
   color: white;
 }
-.plus {
+.new_plus {
   font-size: 2rem;
 }
-.first_alert {
+.new_first_alert {
   background: black;
   color: white;
   height: 2rem;
@@ -106,7 +99,7 @@ input:hover {
   align-items: center;
   font-weight: bold;
 }
-.secound_alert {
+.new_secound_alert {
   background: black;
   color: white;
   height: 2rem;
@@ -116,19 +109,20 @@ input:hover {
   align-items: center;
   font-weight: bold;
 }
-.timeAndHistory{
+.new_timeAndHistory {
   position: relative;
   top: 5%;
   margin-top: 3rem;
   margin-bottom: 3rem;
   color: white;
+  font-weight: bold;
   text-align: center;
 }
 @media only screen and (min-width: 320px) and (max-width: 450px) {
   html {
     font-size: 10px;
   }
-  .add {
+  .new_add {
     height: 3rem;
     min-width: 9rem;
   }
@@ -138,7 +132,7 @@ input:hover {
   html {
     font-size: 13px;
   }
-  .add {
+  .new_add {
     height: 3rem;
     min-width: 10rem;
   }

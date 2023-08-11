@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import format from "date-fns/format";
-import "./Home.css";
+import "./NewComponent.css";
 import Footer from "./Footer";
 
 // Custom hook to handle localStorage for tasks
@@ -27,9 +27,9 @@ function useLocalStorage(key, initialValue) {
   return [storedValue, setValue];
 }
 
-function Home() {
+function NewComponent() {
   const [task, setTask] = useState("");
-  const [tasksList, setTasksList] = useLocalStorage("tasks", []);
+  const [tasksList, setTasksList] = useLocalStorage("newTasks", []);
   const [countWords, setCountWords] = useState(0);
 
   const enterTask = (event) => {
@@ -96,10 +96,10 @@ function Home() {
   const formattedTime = format(currentTime, "hh:mm:ss a");
 
   return (
-    <section className="home_src">
-      <div className="timeAndHistory">
+    <section className="new_src">
+      <div className="new_timeAndHistory">
         <h1> {formattedTime} </h1>
-        <h1 className="history">
+        <h1 className="new_history">
           Today's date: {days}/{month}/{year}
         </h1>
       </div>
@@ -107,11 +107,11 @@ function Home() {
       <div
         style={{ display: displayNone ? "flex" : "none" }}
         onClick={removeItem}
-        className="alert"
+        className="new_alert"
       >
-        <div className="first_alert">Enter</div>
-        <div className="plus">+</div>
-        <div className="secound_alert">+</div>
+        <div className="new_first_alert">Enter</div>
+        <div className="new_plus">+</div>
+        <div className="new_secound_alert">+</div>
       </div>
       <input
         onChange={enterTask}
@@ -121,15 +121,18 @@ function Home() {
         type="text"
         placeholder="Add Task !"
       />
-      <button className="add" onClick={addTask}>
+      <button className="new_add" onClick={addTask}>
         Add Task
       </button>
 
       <div>
         {tasksList.map((taskItem, index) => (
-          <div className="delete" key={index}>
+          <div className="new_delete" key={index}>
             {taskItem}
-            <button className="delete_btn" onClick={() => handleDelete(index)}>
+            <button
+              className="new_delete_btn"
+              onClick={() => handleDelete(index)}
+            >
               Delete
             </button>
           </div>
@@ -140,4 +143,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default NewComponent;
